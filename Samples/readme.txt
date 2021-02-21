@@ -1,0 +1,1 @@
+in this folder various snippets of code are located and they will eventually come together to make the system. This folder can be viewed as an initial testing ground for the code.
