@@ -1,14 +1,30 @@
 # ComplicatedBikeLock
 
+
 ![GitHub Logo](/Resources/pilock.png)
 
+
 ## About the project
-This project is a part of Real Time Embedded Programming 5 course at the University of Glasgow. 
-In this project we will attempt to make a smart bike lock which uses face recognition, an RFID scanner and a keypad code to protect the bike and keep it locked.
+This project is done as a part of the Real Time Embedded Programming course in the University of Glasgow.
+We will attempt to make a smart bike lock with face recognition, RFID authenticator and a keypad.
+The whole system will be running locally on a RaspberryPi.
 
 ## Prerequisites
-OpenCV. Version used for development is 4.5.1.
-Installing it is not an easy and straightforward process. We highly recommend following this guide: https://qengineering.eu/install-opencv-4.5-on-raspberry-pi-4.html
+Anyone compiling the project should have OpenCV installed on their machine. The version used for this project is 4.5.1.
+It is not an easy and straightforward process to install OpenCV so following this tutorial is recommended: https://qengineering.eu/install-opencv-4.5-on-raspberry-pi-4.html
+
+## Hardware used
+
+<ul>
+  <li>Raspberry Pi 3B and 4B (tested on both)</li>
+  <li>Raspberry Pi Camera V2</li>
+  <li>RC522 RFID module</li>
+  <li>Computer keyboard</li>
+</ul>
+
+## License
+
+Project is distributed under GNU General Public License v3.0
 
 ## Contributors
 
