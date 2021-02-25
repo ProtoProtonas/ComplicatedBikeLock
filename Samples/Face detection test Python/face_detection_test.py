@@ -22,7 +22,8 @@ buff = np.frombuffer(stream.getvalue(), dtype=np.uint8)
 image = cv2.imdecode(buff, 1)
 
 # load cascade for detecting faces
-face_cascade = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
+# face_cascade = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
+face_cascade = cv2.CascadeClassifier('cascade.xml')
 # the cascade classifier can be downloaded from https://raw.githubusercontent.com/shantnu/Webcam-Face-Detect/master/haarcascade_frontalface_default.xml
 
 # convert to grayscale
