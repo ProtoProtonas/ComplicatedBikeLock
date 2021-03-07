@@ -13,6 +13,7 @@
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-g" />
+					<Add directory="include" />
 				</Compiler>
 			</Target>
 			<Target title="Release">
@@ -22,6 +23,7 @@
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-O2" />
+					<Add directory="include" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
@@ -36,7 +38,9 @@
 		<Linker>
 			<Add option="`pkg-config --libs --cflags opencv4`" />
 		</Linker>
+		<Unit filename="include/FaceDetector.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="src/FaceDetector.cpp" />
 		<Extensions>
 			<code_completion />
 			<debugger />

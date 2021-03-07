@@ -7,30 +7,36 @@ https://www.rs-online.com/designspark/beginners-guide-to-computer-vision-with-ra
 
 #include <iostream>
 #include <stdio.h>
-#include <opencv2/highgui.hpp>
-#include <opencv2/opencv.hpp>
 
-using namespace cv;
+#include <FaceDetector.h>
+
 using namespace std;
 
 int main(int argv, char** argc)
 {
 
-    cout << "Hello world!" << endl;
+    FaceDetector detector;
+    bool detected = false;
 
-//    cout << "opencv version: " << CV_VERSION << endl;
-//    cout << "major version: " << CV_MAJOR_VERSION << endl;
-//    cout << "minor version: " << CV_MINOR_VERSION << endl;
-//    cout << "subminor version: " << CV_SUBMINOR_VERSION << endl;
-//    cout << getBuildInformation() << endl;
+    while(true) {
+
+        detected = detector.detect_faces();
+        if (detected == true) {
+            cout << "Face has been detected" << endl;
+        } else {
+            cout << "Face has not been detected" << endl;
+        }
+
+    }
+
+
+
+
+
+    /*
 
     // create a classifier instance
     CascadeClassifier face_cascade;
-    if (!face_cascade.load("haar.xml")) {
-        cerr << "ERROR! Could not load cascade file\n";
-        return -1;
-    }
-
 
     // create fram instances
     Mat frame, frame_gray;
@@ -58,9 +64,9 @@ int main(int argv, char** argc)
             break;
         }
 
-        /*
-        Prepare data and apply the cascade classifier to detect face(s)
-        */
+
+        // Prepare data and apply the cascade classifier to detect face(s)
+
 
         // convert to grayscale and increase contrast
         cvtColor(frame, frame_gray, COLOR_BGR2GRAY);
@@ -87,6 +93,8 @@ int main(int argv, char** argc)
             break;
         }
     }
+
+    */
 
     return 0;
 }
