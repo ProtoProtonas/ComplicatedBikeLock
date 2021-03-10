@@ -5,6 +5,8 @@ Lock::Lock()
 {
     //ctor
 
+    // need to manually set teh value of the array here
+    // also remember to update PASS_LENGTH definition in the header file Lock.h
      password[0] = {'p'};
      password[1] = {'a'};
      password[2] = {'s'};
@@ -19,13 +21,13 @@ Lock::Lock()
 
 void Lock::read_character(char new_character) {
 
-    for (int i = 1; i < 8; i++) {
+    for (int i = 1; i < PASS_LENGTH; i++) {
         pass_attempts[i-1] = pass_attempts[i];
     }
     pass_attempts[PASS_LENGTH-1] = new_character;
 
 
-    std::cout << "pass_attempts: ";
+    /*std::cout << "pass_attempts: ";
     for (int i = 0; i < PASS_LENGTH; i++) {
         std::cout << pass_attempts[i];
     }
@@ -35,7 +37,7 @@ void Lock::read_character(char new_character) {
     for (int i = 0; i < PASS_LENGTH; i++) {
         std::cout << password[i];
     }
-    std::cout << std::endl;
+    std::cout << std::endl;*/
 }
 
 bool Lock::check_password() {

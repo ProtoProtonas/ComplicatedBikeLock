@@ -10,10 +10,11 @@ int main()
     Lock locker;
     char new_char;
 
-    while (true) {
-        cout << "Please enter a character: ";
+    cout << "Please enter your password: ";
 
+    while (true) {
         // use some black linux magic to avoid pressing enter key after every character
+        // source for the magic : https://stackoverflow.com/questions/421860/capture-characters-from-standard-input-without-waiting-for-enter-to-be-pressed
         system("stty raw");
         new_char = getchar();
         system("stty cooked");
