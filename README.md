@@ -34,3 +34,7 @@ Haris Khan [@khan-haris](https://github.com/khan-haris) - 2515165K@student.gla.a
 <br />
 Radovan Sramek [@HOMELE55](https://github.com/HOMELE55) - 2265715S@student.gla.ac.uk
 <br />
+
+## Marketing
+
+Twitter page [@BikeComplicated](https://twitter.com/BikeComplicated)
