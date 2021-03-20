@@ -34,3 +34,13 @@ Haris Khan [@khan-haris](https://github.com/khan-haris) - 2515165K@student.gla.a
 <br />
 Radovan Sramek [@HOMELE55](https://github.com/HOMELE55) - 2265715S@student.gla.ac.uk
 <br />
+
+## Marketing
+<!-- Twitter page [@BikeComplicated](https://twitter.com/BikeComplicated) -->
+
+This project is marketed on Twitter [@BikeComplicated](https://twitter.com/BikeComplicated) and Instagram [@complicatedlock](https://www.instagram.com/complicatedlock/)
+<p align="center">
+  <a href="https://twitter.com/BikeComplicated"><img height=100 src="Resources/twitter.png"></img></a>
+  <a></a>
+  <a href="https://www.instagram.com/complicatedlock/"><img height=100 src="Resources/insta.png"></img></a>
+</p>
