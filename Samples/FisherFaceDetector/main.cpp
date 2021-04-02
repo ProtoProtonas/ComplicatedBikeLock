@@ -1,3 +1,5 @@
+// the code is taken from https://docs.opencv.org/3.4/da/d60/tutorial_face_main.html
+// and retyped in order to better understand it, so there are small variations and it is not an exact copy
 
 #include <opencv2/core.hpp>
 #include <opencv2/face.hpp>
