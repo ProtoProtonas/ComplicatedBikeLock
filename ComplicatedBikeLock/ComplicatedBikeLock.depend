@@ -1,0 +1,39 @@
+# depslib dependency file v1.0
+1617475065 source:/home/pi/Desktop/ComplicatedBikeLock/ComplicatedBikeLock/main.cpp
+	<iostream>
+	<PasswordThread.h>
+	<RFIDThread.h>
+	<FaceRecognitionThread.h>
+
+1617466662 source:/home/pi/Desktop/ComplicatedBikeLock/ComplicatedBikeLock/src/Lock.cpp
+	"Lock.h"
+
+1617466693 /home/pi/Desktop/ComplicatedBikeLock/ComplicatedBikeLock/include/Lock.h
+
+1617475213 source:/home/pi/Desktop/ComplicatedBikeLock/ComplicatedBikeLock/src/PasswordThread.cpp
+	"PasswordThread.h"
+	<iostream>
+
+1617466503 /home/pi/Desktop/ComplicatedBikeLock/ComplicatedBikeLock/include/PasswordThread.h
+	<CppThread.h>
+	<Lock.h>
+
+1617465975 /home/pi/Desktop/ComplicatedBikeLock/ComplicatedBikeLock/include/CppThread.h
+	<thread>
+
+1617474984 source:/home/pi/Desktop/ComplicatedBikeLock/ComplicatedBikeLock/src/RFIDThread.cpp
+	"RFIDThread.h"
+	<iostream>
+	<thread>
+
+1617474625 /home/pi/Desktop/ComplicatedBikeLock/ComplicatedBikeLock/include/RFIDThread.h
+	<CppThread.h>
+
+1617475002 source:/home/pi/Desktop/ComplicatedBikeLock/ComplicatedBikeLock/src/FaceRecognitionThread.cpp
+	"FaceRecognitionThread.h"
+	<iostream>
+	<thread>
+
+1617474858 /home/pi/Desktop/ComplicatedBikeLock/ComplicatedBikeLock/include/FaceRecognitionThread.h
+	<CppThread.h>
+
