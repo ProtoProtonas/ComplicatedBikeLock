@@ -7,16 +7,17 @@
 
 FaceDetector::FaceDetector()
 {
-    // this method runs when an object of this class is created
+    // Haar face detector setup
 
     if (!face_cascade.load("haar.xml")) {
         std::cerr << "ERROR! Could not load cascade file\n";
     }
 
-    //cv::VideoCapture cap(0);
     cap.set(cv::CAP_PROP_FRAME_WIDTH, 320);
     cap.set(cv::CAP_PROP_FRAME_HEIGHT, 240);
     cap.set(cv::CAP_PROP_FPS, 5);
+
+    // FisherFace recognizer setup
 
 }
 

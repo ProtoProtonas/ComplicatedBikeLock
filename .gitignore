@@ -133,4 +133,5 @@ dmypy.json
 *.xml
 *.jpg
 *.csv
+Samples/Face Recognition/resources/dataset/bueno/
 

@@ -67,14 +67,14 @@ int main(int argc, const char *argv[])
 
     // check for valid cli arguments, print usage if no args given
     if(argc < 2) {
-        cout << "usage: " << argv[0] << " <csv.ext> <output_folder>" << endl;
+        cout << "usage: " << argv[0] << " <csv.ext>" << endl;
         exit(1);
     }
 
-    string output_folder = ".";
+    /*string output_folder = ".";
     if(argc == 3) {
         output_folder = string(argv[2]);
-    }
+    }*/
 
     // get the path to a .csv
     string fn_csv = string(argv[1]);
@@ -98,27 +98,72 @@ int main(int argc, const char *argv[])
     }
 
     // get the height of the first image to be able to reshape other images to their original size
-    int height = images[0].rows;
+    //int height = images[0].rows;
 
     // remove the last images from the vector to make sure test and training data do not overlap
 
-    srand(time(0));
+    /*srand(time(0));
     int random_index = rand() % 24;
-    cout << random_index << endl;
-    Mat testSample = images[random_index];
-    int testLabel = labels[random_index];
+    cout << random_index << endl;*/
+
+    for(int i = 0; i < images.size(); i++) {
+        cout << images[i] << endl;
+        imshow("Live", images[i]);
+        waitKey(1);
+
+    }
+
+    Mat testSample;
+    int testLabel = 1;
     //images.pop_back();
     //labels.pop_back();
 
     Ptr<FisherFaceRecognizer> model = FisherFaceRecognizer::create();
     model->train(images, labels);
 
-    // do the actual prediction
-    int predictedLabel = model->predict(testSample);
 
-    cout << format("Predicted class = %d / Actual class = %d.", predictedLabel, testLabel) << endl;
 
-    Mat eigenvalues = model->getEigenValues();
+
+
+    Mat frame, frame_gray;
+
+    // set up video capture
+    VideoCapture cap(0);
+    if (!cap.isOpened()) {
+        cerr << "ERROR! Unable to open camera\n";
+        return -1;
+    }
+
+    // set parameters of video stream
+    cap.set(CAP_PROP_FRAME_WIDTH, 128);
+    cap.set(CAP_PROP_FRAME_HEIGHT, 128);
+    cap.set(CAP_PROP_FPS, 5);
+
+
+    while(true) {
+        cap.read(frame);
+        if (frame.empty()) {
+            cerr << "ERROR! Blank frame grabbed \n";
+            break;
+        }
+
+        cvtColor(frame, frame_gray, COLOR_BGR2GRAY);
+        equalizeHist(frame_gray, frame_gray);
+
+        testSample = frame_gray;
+
+
+        int predictedLabel = model->predict(testSample);
+
+        cout << format("Predicted class = %d / Actual class = %d.", predictedLabel, testLabel) << endl;
+
+        imshow("Live", frame);
+        if (waitKey(5) >= 0) {
+            break;
+        }
+
+    }
+    /*Mat eigenvalues = model->getEigenValues();
     Mat W = model->getEigenVectors();
     Mat mean = model->getMean();
 
@@ -161,7 +206,7 @@ int main(int argc, const char *argv[])
         } else {
             imwrite(format("%s/fisherface_reconstruction_%d.png", output_folder.c_str(), num_component), reconstruction);
         }
-    }
+    }*/
 
     if(argc == 2) {
         waitKey(0);
