@@ -134,4 +134,5 @@ dmypy.json
 *.jpg
 *.csv
 Samples/Face Recognition/resources/dataset/bueno/
+!Samples/Face Recognition/resources/dataset/Matt/*.jpg
 
