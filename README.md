@@ -22,6 +22,8 @@ It is not an easy and straightforward process to install OpenCV so following thi
   <li>Computer keyboard</li>
 </ul>
 
+## Pin Layout Table b/w MFRC522 RFID Module & Raspberry Pi (3B/4B)
+
 ## License
 
 Project is distributed under GNU General Public License v3.0
