@@ -55,17 +55,22 @@ Make sure you are on latest versions
 NOTE
 ====
 
-For Raspbian 9 (stretch) no need to enable "Device tree" as [it always enabled](https://www.raspberrypi.org/forums/viewtopic.php?p=1257655&sid=a088f010b2b78ab5f14e22e747b8ff2b#p1257655).
+For Raspbian 9 (stretch) no need to enable "Device tree" as [it's always enabled](https://www.raspberrypi.org/forums/viewtopic.php?p=1257655&sid=a088f010b2b78ab5f14e22e747b8ff2b#p1257655).
+
+NOTE
+====
 2. Make sure you have SPI in raspi-config (5. Interfacing Options -> P4)
 
 cd  /home/pi (assuming this is your home directory)
 
-BCM2835 library (library 1.65 was the current version at the time of writting)
-Install latest from BCM2835 from : http://www.airspayce.com/mikem/bcm2835/
+BCM2835 library (library 1.68 is the current version at the moment)
+Install latest version BCM2835 from : http://www.airspayce.com/mikem/bcm2835/
 
-1. wget http://www.airspayce.com/mikem/bcm2835/bcm2835-1.65.tar.gz
-2. tar -zxf bcm2835-1.65.tar.gz
-3. cd bcm2835-1.65
+On your terminal (Since 1.68 is the current version, change the version below in the code only)
+
+1. wget http://www.airspayce.com/mikem/bcm2835/bcm2835-1.68.tar.gz
+2. tar -zxf bcm2835-1.68.tar.gz
+3. cd bcm2835-1.68
 4. ./configure
 5. sudo make check
 6. sudo make install
