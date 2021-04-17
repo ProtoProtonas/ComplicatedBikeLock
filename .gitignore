@@ -135,4 +135,4 @@ dmypy.json
 *.csv
 Samples/Face Recognition/resources/dataset/bueno/
 !Samples/Face Recognition/resources/dataset/Matt/*.jpg
-
+!ComplicatedBikeLock\resources\dataset\Matt\*.jpg
