@@ -2,6 +2,9 @@
 #include <PasswordThread.h>
 #include <RFIDThread.h>
 #include <FaceRecognitionThread.h>
+#include <wiringPi.h>
+
+#define LED_PIN 25
 
 /* DISCLAIMER
 
@@ -18,6 +21,9 @@ using namespace std;
 int main()
 {
     cout << "Hello world!" << endl;
+
+    wiringPiSetup();
+    digitalWrite(LED_PIN, LOW);
 
     bool passwordIsCorrect = false;
     bool faceIsCorrect = false;
@@ -37,6 +43,7 @@ int main()
 
     if(passwordIsCorrect && RFIDIsCorrect && faceIsCorrect) {
         cout << "\nBike is unlocked" << endl;
+        digitalWrite(LED_PIN, HIGH);
     }
 
 

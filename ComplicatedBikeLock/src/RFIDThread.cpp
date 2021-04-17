@@ -6,11 +6,10 @@
 RFIDThread::RFIDThread(bool* isCorrect)
 {
     isRFIDCorrect = isCorrect;
-    std::cout << "\nRunning RFID thread" << std::endl;
 }
 
 void RFIDThread::run() {
-    std::cout << "\nPlease present a valid RFID card" << std::endl;
+    std::cout << "Please present a valid RFID card" << std::endl;
     *isRFIDCorrect = 1;
 }
 

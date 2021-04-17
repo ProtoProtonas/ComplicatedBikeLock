@@ -3,6 +3,7 @@
 
 
 #include <CppThread.h>
+#include <FaceScanner.h>
 
 class FaceRecognitionThread : public CppThread
 {
@@ -10,7 +11,7 @@ class FaceRecognitionThread : public CppThread
         FaceRecognitionThread(bool* isCorrect);
         virtual ~FaceRecognitionThread();
 
-        //init face recognition object here
+        FaceScanner scanner;
 
     protected:
         bool *isFaceCorrect;

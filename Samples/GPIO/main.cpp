@@ -1,20 +1,26 @@
 #include <iostream>
 #include <wiringPi.h>
 
+//#define LED_PIN 24 // corresponds to GPIO11
+#define LED_PIN 25 // corresponds to GPIO26
+
 
 using namespace std;
 
 int main()
 {
+
     wiringPiSetup();
-    pinMode(6, OUTPUT);
+    pinMode(LED_PIN, OUTPUT);
 
     while(1)
     {
-        digitalWrite(6, HIGH);
+        digitalWrite(LED_PIN, HIGH);
         delay(500);
-        digitalWrite(6, LOW);
+        cout << "Written LOW" << endl;
+        digitalWrite(LED_PIN, LOW);
         delay(500);
+        cout << "Written HIGH" << endl;
     }
 
 

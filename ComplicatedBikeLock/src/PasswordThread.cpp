@@ -5,7 +5,6 @@ PasswordThread::PasswordThread(bool* _isCorrect)
 {
     // init
     isPasswordCorrect = _isCorrect;
-    std::cout << "Running password thread" << std::endl;
 }
 
 // code that's actually executing
@@ -22,6 +21,7 @@ void PasswordThread::run() {
         lock.read_character(new_char);
         if (lock.check_password()) { break; }
     }
+    std::cout << std::endl << "Password is correct" << std::endl;
     *isPasswordCorrect = 1;
 }
 
