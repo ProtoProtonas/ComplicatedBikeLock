@@ -25,13 +25,16 @@ It is not an easy and straightforward process to install OpenCV so following thi
 ## MFRC522 Install Guide
 MRFC522 Library for Raspberry Pi
 First of all we have to install the C library for Broadcom BCM 2835 by going to this link http://www.airspayce.com/mikem/bcm2835/ and check the latest version. The 'xx' denotes the version of the Broadcom BCM 2835 <br />
-`wget http://www.airspayce.com/mikem/bcm2835/bcm2835-1.xx.tar.gz 
-tar -zxf bcm2835-1.xx.tar.gz
-cd bcm2835-1.xx
-./configure
-make
-sudo make check
-sudo make install` 
+
+<ul>
+  wget http://www.airspayce.com/mikem/bcm2835/bcm2835-1.xx.tar.gz </li>
+  tar -zxf bcm2835-1.xx.tar.gz</li>
+  cd bcm2835-1.xx</li>
+  ./configure</li>
+  make</li>
+  sudo make check</li>
+  sudo make install</li> 
+</ul>
 
 To build, go the the directory where the code is saved using Raspberry Pi's Terminal and apply the given code
 `g++ MFRC522.cpp Read.cpp -std=c++11 -lbcm2835`
