@@ -9,7 +9,7 @@ RFIDThread::RFIDThread(bool* isCorrect)
 }
 
 void RFIDThread::run() {
-    std::cout << "Please present a valid RFID card" << std::endl;
+    //std::cout << "Please present a valid RFID card" << std::endl;
     *isRFIDCorrect = 1;
 }
 
