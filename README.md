@@ -18,8 +18,8 @@ It is not an easy and straightforward process to install OpenCV so following thi
 <ul>
   <li>Raspberry Pi 3B and 4B (tested on both)</li>
   <li>Raspberry Pi Camera V2</li>
-  <li>RC522 RFID module</li>
-  <li>Computer keyboard</li>
+  <li>RC522 RFID Module</li>
+  <li>Computer Keyboard</li>
 </ul>
 
 ## Pin Layouts
