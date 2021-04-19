@@ -21,6 +21,7 @@ It is not an easy and straightforward process to install OpenCV so following thi
   <li>RC522 RFID module</li>
   <li>Computer keyboard</li>
 </ul>
+
 ## MFRC522 Install Guide
 MRFC522 Library for Raspberry Pi
 First of all we have to install the C library for Broadcom BCM 2835
