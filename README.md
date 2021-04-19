@@ -22,7 +22,8 @@ It is not an easy and straightforward process to install OpenCV so following thi
   <li>Computer keyboard</li>
 </ul>
 
-## Pin Layout Table b/w MFRC522 RFID Module & Raspberry Pi (3B/4B)
+## Pin Layouts
+![Connection](https://user-images.githubusercontent.com/77743131/115311606-d314ef00-a167-11eb-9365-c87091a8fba3.png)
 ![Pin Layout](https://user-images.githubusercontent.com/77743131/113899392-ac98a080-97c4-11eb-9763-6e3b3c75fe24.PNG)
 
 ## License
