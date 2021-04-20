@@ -9,6 +9,8 @@ This project is done as a part of the Real Time Embedded Programming course in t
 We will attempt to make a smart bike lock with face recognition, RFID authenticator and a keypad.
 The whole system will be running locally on a RaspberryPi.
 
+Demonstration: https://youtu.be/LgS8y1IUoOg
+
 ## Prerequisites
 Anyone compiling the project should have OpenCV installed on their machine. The version used for this project is 4.5.1.
 It is not an easy and straightforward process to install OpenCV so following this tutorial is recommended: https://qengineering.eu/install-opencv-4.5-on-raspberry-pi-4.html
